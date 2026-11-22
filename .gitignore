@@ -1,0 +1,45 @@
+# Credenciales y configuracion local
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python y pruebas
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Compilacion y empaquetado
+build/
+dist/
+*.spec
+
+# Datos generados por el programa
+exports/
+data/
+*.db
+*.db-shm
+*.db-wal
+*.csv
+*.log
+
+# Editores y sistema operativo
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*

@@ -1,0 +1,18 @@
+ZOOM MONITOR - INSTALACION EN OTRO EQUIPO WINDOWS
+=================================================
+
+1. Copie toda esta carpeta al equipo de destino.
+2. Cambie el nombre de .env.example a .env.
+3. Edite .env y configure las credenciales y los Meeting ID.
+4. Abra PowerShell dentro de esta carpeta.
+5. Ejecute: .\ZoomMonitor.exe
+
+El equipo de destino no necesita Python instalado.
+
+Cada monitoreo crea un CSV dentro de la carpeta exports. Para detener el
+monitoreo presione Ctrl+C. No comparta el archivo .env, porque contiene el
+Client Secret de Zoom.
+
+Si Windows muestra una advertencia de SmartScreen, verifique que el archivo
+provenga del equipo donde fue compilado. Un ejecutable sin firma digital puede
+mostrar esa advertencia aunque sea legítimo.

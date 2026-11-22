@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zoom-attendance-monitor"
+version = "0.1.0"
+description = "Monitor autonomo de conteos de participantes en reuniones Zoom"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27,<1", "python-dotenv>=1.0,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9", "pytest-asyncio>=0.23,<1"]
+build = ["pyinstaller>=6,<7", "pillow>=11,<13"]
+
+[project.scripts]
+zoom-monitor = "zoom_monitor.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["zoom_monitor*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
